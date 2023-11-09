@@ -51,6 +51,15 @@ pipeline {
 			}
 		}
 
+        //Code starts for stage Code Coverage
+		stage('Code Coverage') {
+            steps {
+                step([
+                    $class:'JacocoPublisher'
+                ])  
+            }
+        }
+
 
     }
 }
